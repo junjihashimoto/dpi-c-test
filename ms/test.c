@@ -9,3 +9,11 @@ int add() {
   return a;
 }
 
+
+int
+set(int* d) {
+  int i=0;
+  for(i=0;i<16;i++)
+    d[i]=i;
+  return 0;
+}

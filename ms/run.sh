@@ -1,4 +1,8 @@
-gcc -m32 -fPIC -shared -o libtest.so test.c
+#32bit version
+#gcc -m32 -fPIC -shared -o libtest.so test.c
+
+#64bit version
+gcc  -fPIC -shared -o libtest.so test.c
 vlog test.sv
-vsim -c -sv_lib libtest tb_dpi -do "run -all;quit -f"
+echo "run -all;quit -f" | vsim -c -sv_lib libtest tb_dpi 
 
